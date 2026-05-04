@@ -15,7 +15,7 @@ class Package(db.Model): ## COLUMN PACKAGE
     price = db.Column(db.Float, nullable=False)
     speed = db.Column(db.String(50)) # contoh: '20 Mbps'
 
-class Transaction(db.Model): ## COLUMN TRANSACTION
+class Transaction(db.Model): ## COLUMN TRANSACTION  
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     package_id = db.Column(db.Integer, db.ForeignKey('package.id'), nullable=False)
