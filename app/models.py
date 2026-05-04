@@ -22,7 +22,7 @@ class Transaction(db.Model): ## COLUMN TRANSACTION
     status = db.Column(db.String(20), default='pending') # pending, paid, failed
     stripe_session_id = db.Column(db.String(255), unique=True, nullable=True)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    voucher = db.relationship('Voucher', backref='transaction', uselist=False) # 1 to 1
+    voucher = db.relationship('Voucher', backref='transaction', uselist=False) # 1 to 1 
 
 class Voucher(db.Model): ## COLUMN VOUCHER
     id = db.Column(db.Integer, primary_key=True)
