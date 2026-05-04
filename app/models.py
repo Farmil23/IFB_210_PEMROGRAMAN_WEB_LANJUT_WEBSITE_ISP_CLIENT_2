@@ -13,7 +13,7 @@ class Package(db.Model): ## COLUMN PACKAGE
     name = db.Column(db.String(100), nullable=False)
     package_type = db.Column(db.String(50), nullable=False) # 'bulanan' atau 'voucher_jam'
     price = db.Column(db.Float, nullable=False)
-    speed = db.Column(db.String(50)) # contoh: '20 Mbps'
+    speed = db.Column(db.String(50)) # contoh: '20 Mbps' 
 
 class Transaction(db.Model): ## COLUMN TRANSACTION  
     id = db.Column(db.Integer, primary_key=True)
